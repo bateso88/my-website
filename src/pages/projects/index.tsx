@@ -6,7 +6,7 @@ const Projects = () => {
     <>
       <Navbar/> 
       <p>HI!</p>
-      <div id="about"></div>
+      <div>this is a div</div>
     </>
   );
 };
