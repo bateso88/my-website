@@ -7,6 +7,6 @@ const Home = () => {
       <p>yoyo</p>
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

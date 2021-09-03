@@ -1,10 +1,12 @@
 import Navbar from "@Components/Navbar";
 
 const Projects = () => {
+
   return (
     <>
-      <Navbar /> 
+      <Navbar/> 
       <p>HI!</p>
+      <div id="about"></div>
     </>
   );
 };
