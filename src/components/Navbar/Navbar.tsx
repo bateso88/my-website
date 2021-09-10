@@ -1,7 +1,14 @@
+import React from "react";
+import Link from "next/link";
 import { NavbarTemplate } from "./styles";
 
 const Navbar = () => {
-  return <NavbarTemplate>NAVBAR</NavbarTemplate>;
+  return (
+    <NavbarTemplate>
+      NAVBAR<Link href="/"> Home </Link>
+      <Link href="/projects"> Projects </Link>
+    </NavbarTemplate>
+  );
 };
 
 export default Navbar;

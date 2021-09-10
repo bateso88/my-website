@@ -1,16 +1,18 @@
-import Document from "next/document";
-import { ServerStyleSheet } from "styled-components";
+import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
+          // eslint-disable-next-line react/display-name
           enhanceApp: (App) => (props) =>
-            /* eslint-disable react/jsx-props-no-spreading */
             sheet.collectStyles(<App {...props} />),
         });
 
@@ -21,6 +23,7 @@ export default class MyDocument extends Document {
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
+            {/* {flush() || null} */}
           </>
         ),
       };

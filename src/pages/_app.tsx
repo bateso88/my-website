@@ -1,8 +1,13 @@
 import App, { AppProps } from "next/app";
-import "@Styles/globals.css";
+import GlobalStyle from "@Styles/globalStyle";"@Styles/globalStyles";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 MyApp.getInitialProps = async (appContext) => {
