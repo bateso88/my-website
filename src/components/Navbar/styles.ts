@@ -44,6 +44,7 @@ export const NavLogo = styled(LinkS)`
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    /* color: #76c55b; */
   }
 `;
 
@@ -88,11 +89,11 @@ export const NavLink = styled(LinkS)`
   cursor: pointer;
 
   &:hover {
-    color: #64849b;
+    color: #76c55b;
     transition: 0ms.2s ease-in-out;
   }
 
   &.active {
-    border-bottom: 3px solid #eca400;
+    border-bottom: 3px solid #76c55b;
   }
 `;
