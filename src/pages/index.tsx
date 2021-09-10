@@ -2,8 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 
 import Navbar from "@Components/Navbar";
-import { Placeholder } from "@Components/Placeholder";
 import Sidebar from "@Components/Sidebar";
+import HeroSection from "@Components/HeroSection";
 
 
 const Home = () => {
@@ -14,16 +14,15 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Ollie Bates</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Placeholder />
-      <p>yoyo </p>
-    </div>
+      <HeroSection />
+    </>
   );
 };
 

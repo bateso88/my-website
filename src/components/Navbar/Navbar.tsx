@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 
 import {
@@ -34,44 +33,42 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#000" }}>
-        <Nav scrollNav={scrollNav}>
-          <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
-              NAVBAR
-            </NavLogo>
-            <MobileIcon onClick={toggle}>
-              <FaBars />
-            </MobileIcon>
-            <NavMenu>
-              <NavItem>
-                <NavLink
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  About
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  Projects
-                </NavLink>
-              </NavItem>
-            </NavMenu>
-          </NavbarContainer>
-        </Nav>
-      </IconContext.Provider>
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <NavLogo to="/" onClick={toggleHome}>
+            HOME
+          </NavLogo>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLink
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                About
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
+                Projects
+              </NavLink>
+            </NavItem>
+          </NavMenu>
+        </NavbarContainer>
+      </Nav>
     </>
   );
 };

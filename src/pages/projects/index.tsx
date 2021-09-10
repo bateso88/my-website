@@ -4,7 +4,7 @@ const Projects = () => {
 
   return (
     <>
-      <Navbar/> 
+      {/* <Navbar/>  */}
       <p>HI!</p>
       <div>this is a div</div>
     </>
