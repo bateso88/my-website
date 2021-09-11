@@ -21,6 +21,12 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="projects" onClick={toggle} offset={-80}>
             Projects
           </SidebarLink>
+          <SidebarLink to="travel" onClick={toggle} offset={-80}>
+            Travel
+          </SidebarLink>
+          <SidebarLink to="other" onClick={toggle} offset={-80}>
+            Other
+          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

@@ -26,6 +26,8 @@ const Home = () => {
       <HeroSection />
       <InfoSection id="about" title="About" lightTheme={true} />
       <InfoSection id="projects" title="Projects" lightTheme={false} />
+      <InfoSection id="travel" title="Travel" lightTheme={true} />
+      <InfoSection id="other" title="Other" lightTheme={false} />
     </>
   );
 };
