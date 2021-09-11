@@ -4,6 +4,8 @@ import Head from "next/head";
 import Navbar from "@Components/Navbar";
 import Sidebar from "@Components/Sidebar";
 import HeroSection from "@Components/HeroSection";
+import InfoSection from "@Components/InfoSection";
+
 
 
 const Home = () => {
@@ -22,6 +24,8 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
+      <InfoSection id="about" title="About" lightTheme={true} />
+      <InfoSection id="projects" title="Projects" lightTheme={false} />
     </>
   );
 };
