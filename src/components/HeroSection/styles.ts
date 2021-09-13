@@ -2,15 +2,26 @@ import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 
 export const HeroContainer = styled.div`
-  /* background-image: url("../images/IMG_2289.jpeg"); */
-  background: green;
+  /* background: green;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
   height: 800px;
   position: relative;
-  z-index: 1;
+  z-index: 1; */
+
+  background-image: url("../../images/IMG_2289.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: contain;
+  justify-content: center;
 
   :before {
     content: "";
@@ -19,12 +30,13 @@ export const HeroContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
     z-index: 2;
   }
 `;
 
 export const HeroBg = styled.div`
+  /* background-image: url("../../images/IMG_2289.jpeg"); */
   position: absolute;
   top: 0;
   right: 0;
