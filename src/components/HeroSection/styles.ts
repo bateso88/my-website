@@ -11,7 +11,8 @@ export const HeroContainer = styled.div`
   position: relative;
   z-index: 1; */
 
-  background-image: url("../../images/IMG_2289.jpeg");
+  /* background-image: url("../../images/IMG_2289.jpeg"); */
+  background: blue;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,7 +31,7 @@ export const HeroContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.7);
     z-index: 2;
   }
 `;
