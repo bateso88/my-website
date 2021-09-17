@@ -2,13 +2,12 @@ import { useWindowSize } from "@Hooks/useWindowSize";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import { CarouselItem, CarouselCard, CarouselWrapper } from "./styles";
+import { CarouselItem, CarouselCard, CarouselCardDescriptionContainer } from "./styles";
 
 const ProjectCarousel = () => {
   const windowSize = useWindowSize();
 
   return (
-    <CarouselWrapper>
       <Carousel
         showArrows={false}
         showStatus={false}
@@ -16,14 +15,15 @@ const ProjectCarousel = () => {
         infiniteLoop={true}
         autoPlay={true}
         swipeable={true}
-        interval={3000}
+        interval={3500}
         centerMode={true}
         centerSlidePercentage={windowSize.width<550 ? 100 : 33}
-        stopOnHover={false}
       >
         <CarouselItem>
           <CarouselCard>
-            <p className="legend">{windowSize.width}</p>
+            <CarouselCardDescriptionContainer>
+              <p> This is some description text about the project that will be displayed here</p>
+            </CarouselCardDescriptionContainer>
           </CarouselCard>
         </CarouselItem>
         <CarouselItem>
@@ -62,7 +62,6 @@ const ProjectCarousel = () => {
           </CarouselCard>
         </CarouselItem>
       </Carousel>
-    </CarouselWrapper>
   );
 };
 
